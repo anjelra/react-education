@@ -4,7 +4,7 @@
         "es2021": true,
         "node": true
     },
-    "extends": ["eslint:recommended", "google", "prettier"],
+    "extends": ["eslint:recommended", "prettier"],
     "overrides": [
     ],
     "parserOptions": {
@@ -14,7 +14,7 @@
     "rules": {
         "no-var": "off",
         "linebreak-style": "off",
-        "prettier/prettier": "err"
+        "prettier/prettier": "error"
     },
     "plugins": [
         "prettier"

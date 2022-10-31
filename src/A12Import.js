@@ -17,3 +17,12 @@ console.log(one.longVarName);
 
 // A12ExportTwo 안의 메소드
 console.log(`${App.name}`);
+
+// DOM에 추가하는 명령
+const result = document.getElementById('result');
+
+const div = document.createElement('div');
+const text = document.createTextNode(`${name} / ${num}`);
+
+div.appendChild(text);
+result.appendChild(div);
