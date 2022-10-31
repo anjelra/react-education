@@ -36,10 +36,13 @@ const objOne = {
 const objTwo = {
   id: 2,
   address: 'Seoul',
+  // 중복된 속성은 뒤에 오는 값으로 덮어쓰기가 된다.
+  ...objOne,
 };
 console.log(objTwo);
 
 const objThree = {
+  objOne,
   id: 3,
   address: 'InChen',
 };
