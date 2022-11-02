@@ -1,0 +1,13 @@
+
+.title {
+    background-color: gray;
+    color: aqua;
+    font-size: 24pt;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* 앞에 :global을 붙이면 기존의 css와 마찬가지로 전역으로 등록된다. */
+:global .innerColor {
+    color: orange;
+}
