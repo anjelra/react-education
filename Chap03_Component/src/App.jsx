@@ -8,6 +8,9 @@ import A05FuncEvent from "./components/A05FuncEvent";
 import A06CreateDOM from "./components/A06CreateDOM";
 import A07Hook from "./components/A07Hook";
 import A08Hook from "./components/A08Hook";
+import A09HigherOrder from "./components/A09HigherOrder";
+import A10Immer from "./components/A10Immer";
+import A11Currency from "./components/A11Currency";
 
 
 function App() {
@@ -31,6 +34,17 @@ function App() {
       <h1>Chap03 Component</h1>
       하위컴포넌트에 데이터 전달은 속성 형태로 이용한다. key가 변수명 = value
       <br />
+
+      <hr />
+      <A11Currency></A11Currency>
+
+      <hr />
+
+      <A10Immer></A10Immer>
+
+      <hr />
+
+      <A09HigherOrder name="젤"></A09HigherOrder>
 
       <hr />
 

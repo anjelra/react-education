@@ -1,7 +1,7 @@
 import React from "react";
-import A07WithComp from "./A07WithComp";
+import A09WithComp from "./A09WithComp";    // 함수다.
 
-function A07HigherOrder(props) {
+function A09HigherOrder(props) {
   return (
     <div>
       <h3>A07 Higher Order Component</h3>
@@ -10,10 +10,11 @@ function A07HigherOrder(props) {
 
       Age: {props.age}
       <br />
-      
+
       <button onClick={props.changeAge}>AGE</button>
     </div>
   );
 }
 
-export default A07WithComp(A07HigherOrder);
+// 이 말은, withComp에 매개변수로 A09HigherOrder 를 넘겨줬다.
+export default A09WithComp(A09HigherOrder);
