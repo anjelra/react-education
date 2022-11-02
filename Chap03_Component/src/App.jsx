@@ -4,6 +4,9 @@ import A01ClassProps from "./components/A01ClassProps";
 import A02ClassState from "./components/A02ClassState";
 import A03FuncProps from "./components/A03FuncProps";
 import A04FuncState from "./components/A04FuncState";
+import A05FuncEvent from "./components/A05FuncEvent";
+import A06CreateDOM from "./components/A06CreateDOM";
+import A07Hook from "./components/A07Hook";
 
 
 function App() {
@@ -27,6 +30,20 @@ function App() {
       <h1>Chap03 Component</h1>
       하위컴포넌트에 데이터 전달은 속성 형태로 이용한다. key가 변수명 = value
       <br />
+
+      <hr />
+
+      <A07Hook></A07Hook>
+
+      <hr />
+
+      <A06CreateDOM></A06CreateDOM>
+
+      <hr />
+
+      <A05FuncEvent></A05FuncEvent>
+
+      <hr />
 
       <A04FuncState></A04FuncState>
 

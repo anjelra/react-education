@@ -24,9 +24,19 @@
     }
 
     // web 표준방식
-    document.getElementById("btn03").addEventListener("click", function (evt) {
-      console.log(evt.target)
-    })
+    document.getElementById("btn03").addEventListener("click", function (evt, color) {
+      console.log(evt.target);
+      evt.target.style.background = color;
+    });
+
+    function btn04Event(evt, color) {
+      console.log(evt.target);
+      evt.target.style.background = color;
+    };
+
+    document.getElementById('btn04').addEventListener('click', function (event) {
+      btn04Event(event, 'orange');
+    });
   </script>
 </body>
 
