@@ -1,12 +1,20 @@
 // ! 총 정리
 
 /**
-   useMemo 일반함수의 의존관계 정의.
-   useCallback 이벤트 의존관계 정의.
-   useEffect 라이프 스코프 정의.
-   useState 변수 값 바뀌면 화면 렌더링.
-   useRef 값을 키핑할 목적.
-   useReducer 화면에서만 쓰겠다 하면 useReducer. 전체적으로 관리하겠다 하면 Redux를 사용하면 됨.(사용방법은 동일.)
+ * ! useMemo, useCallback, useEffect, useReducer 는 두번째 파라미터에 빈값을 주게 되면 최초 로드될 떄 한번만 실행된다.
+ * 
+   useMemo 
+    - 일반함수의 의존관계 정의.(렌더링 될 때마다 함수를 새로 만들 필요가 없으니, 특정 state에 의존성을 부여하는 것임.)
+   useCallback 
+    - 이벤트 의존관계 정의.(렌더링 될 때마다 함수를 새로 만들 필요가 없으니, 특정 state에 의존성을 부여하는 것임.)
+   useEffect 
+    - 라이프 스코프 정의.(렌더링 될 때마다 함수를 새로 만들 필요가 없으니, 특정 state에 의존성을 부여하는 것임.)
+   useState 
+    - 변수 값 바뀌면 화면 렌더링.
+   useRef 
+    - 값을 키핑할 목적 또는 DOM 객체를 바인딩할 목적.
+   useReducer (이벤트 핸들러를 분리해서 사용하는 것임.)
+    - 화면에서만 쓰겠다 하면 useReducer. 전체적으로 관리하겠다 하면 Redux를 사용하면 됨.(사용방법은 동일.)
  * 
  */
 
