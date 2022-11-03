@@ -25,7 +25,10 @@ function A01Style() {
         <h3 className={'title color'}>A01 Style</h3>
         <h3 className={title}>A01 Style</h3>
         <h3 className={style}>A01 Style</h3>
-        {/* 여러개 기술하는 경우에는, {} 로 묶어서 처리해줄것! */}
+        {/* 여러개 기술하는 경우에는, {} 로 묶어서 처리해줄것!
+            {}는 원래 리엑트 문법이고 (1개) 
+            그 다음에는 여러개 기술할 때 (1개)
+            총 2개 */}
         <h3 className={{
           color: 'lightgray',
           fontSize: '24pt',
