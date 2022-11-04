@@ -20,6 +20,7 @@ function AddContact() {
   return (
     <div>
       <h3>Get Contact</h3>
+      <h3>React config.</h3>
 
       <div>
         Name:{" "}
