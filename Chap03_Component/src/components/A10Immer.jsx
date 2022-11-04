@@ -1,4 +1,5 @@
 // 객체는 하단에 풀어주고 풀어주고 이런 식으로 접근하기 때문에, immer 라는 모듈을 사용하면 쉽게 할 수 있다.
+// immer 는 우리가 쓰는 push, pop 등등 주소값 안변하는 것들도 쓸 수 있음!
 
 // npm install immer
 import React, { useState } from "react";

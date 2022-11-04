@@ -1,4 +1,5 @@
 import { createAction, handleActions } from "redux-actions";
+import producer, { produce } from "immer";
 
 const TODOLIST_ADDTODO = "TODOLIST/ADDTODO";
 const TODOLIST_UPDATETODO = "TODOLIST/UPDATETODO";
@@ -41,14 +42,32 @@ const todoListR = handleActions(
     },
     [TODOLIST_UPDATETODO]: (state, action) => {
       // createAction의 action의 값은 payload라는 이름으로 전달한다.
-      const todos = state.todoList.map((todo) =>
-        todo.id === action.payload ? { ...todo, done: !todo.done } : todo
-      );
-      return { ...state, todoList: todos };
+      //   const todos = state.todoList.map((todo) =>
+      //     todo.id === action.payload ? { ...todo, done: !todo.done } : todo
+      //   );
+      //   return { ...state, todoList: todos };
+
+      // immer 버전
+      return produce(state, (draft) => {
+        const index = draft.todoList.findIndex(
+          (todo) => todo.id === action.payload
+        );
+        const todo = draft.todoList([index]);
+        todo.done = !todo.done;
+      });
     },
     [TODOLIST_DELETETODO]: (state, action) => {
-      const todos = state.todoList.filter((todo) => todo.id !== action.payload);
-      return { ...state, todoList: todos };
+      //   const todos = state.todoList.filter((todo) => todo.id !== action.payload);
+      //   return { ...state, todoList: todos };
+
+      // immer 버전
+      return produce(state, (draft) => {
+        const index = draft.todoList.findIndex(
+          (todo) => todo.id === action.payload
+        );
+
+        draft.todoList.splice(index, 1);
+      });
     },
     [TODOLIST_CHANGETEXT]: (state, action) => {
       return { ...state, text: action.payload };
